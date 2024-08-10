@@ -31,8 +31,9 @@ const Home = () => {
                   <td>{d.name}</td>
                   <td>{d.email}</td>
                   <td>
-                    <button>EDIT</button>
+                    <Link to={`/update/${d.id}`}>EDIT</Link>
                     <button>DELETE</button>
+                    <button>READ</button>
                   </td>
                 </tr>
               );
