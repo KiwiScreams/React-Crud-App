@@ -25,7 +25,7 @@ const Update = () => {
     event.preventDefault();
     axios.put("http://localhost:3030/users/" + id, inputData).then((res) => {
       alert("Data Updated");
-      navigate("/");
+      navigate("/home");
     });
   };
 
