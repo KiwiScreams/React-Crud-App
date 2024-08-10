@@ -32,42 +32,37 @@ const Update = () => {
   return (
     <>
       <div>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="id">ID:</label>
-              <input
-                type="number"
-                disabled
-                name="id"
-                value={inputData.id}
-              />
-            </div>
-            <div>
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                name="name"
-                value={inputData.name}
-                onChange={(e) =>
-                  setInputData({ ...inputData, name: e.target.value })
-                }
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                name="email"
-                value={inputData.email}
-                onChange={(e) =>
-                  setInputData({ ...inputData, email: e.target.value })
-                }
-              />
-            </div>
-            <br />
-            <button>Update</button>
-          </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="id">ID:</label>
+            <input type="number" disabled name="id" value={inputData.id} />
+          </div>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={inputData.name}
+              onChange={(e) =>
+                setInputData({ ...inputData, name: e.target.value })
+              }
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={inputData.email}
+              onChange={(e) =>
+                setInputData({ ...inputData, email: e.target.value })
+              }
+            />
+          </div>
+          <br />
+          <button>Update</button>
+        </form>
+      </div>
     </>
   );
 };
