@@ -21,7 +21,7 @@ const Read = () => {
           <p>{data.id}</p>
           <p>{data.name}</p>
           <p>{data.email}</p>
-          <Link to="/">HOME</Link>
+          <Link to="/home">HOME</Link>
         </div>
       </div>
     </>

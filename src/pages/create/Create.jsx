@@ -11,7 +11,7 @@ const Create = () => {
     event.preventDefault();
     axios.post("http://localhost:3030/users", inputData).then((res) => {
       alert("success");
-      navigate("/");
+      navigate("/home");
     });
   };
   return (
