@@ -7,15 +7,12 @@ const Create = () => {
     email: "",
   });
   const navigate = useNavigate();
-  const handleSubmit = (event) =>
-  {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:3030/users', inputData).then(res => 
-    {
-        alert('success');
-        navigate("/");
-    }
-    )
+    axios.post("http://localhost:3030/users", inputData).then((res) => {
+      alert("success");
+      navigate("/");
+    });
   };
   return (
     <>
@@ -31,7 +28,9 @@ const Create = () => {
         <input
           type="email"
           name="email"
-          onChange={(e) => setInputData({ ...inputData, email: e.target.value })}
+          onChange={(e) =>
+            setInputData({ ...inputData, email: e.target.value })
+          }
         />
         <button>submit</button>
       </form>
