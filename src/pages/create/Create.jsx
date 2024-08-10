@@ -16,7 +16,7 @@ const Create = () => {
         navigate("/");
     }
     )
-  }
+  };
   return (
     <>
       <h1>Create</h1>
