@@ -2,14 +2,25 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("http://localhost:3030/users")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
+  function handleDelete(id) {
+    const confirm = window.confirm("Do you like to Delete?");
+    if (confirm) {
+      axios.delete("http://localhost:3030/users/" + id).then((res) => {
+        alert("Record Deleted");
+        navigate("/");
+      });
+    }
+  }
   return (
     <>
       <section className="container">
@@ -32,7 +43,7 @@ const Home = () => {
                   <td>{d.email}</td>
                   <td>
                     <Link to={`/update/${d.id}`}>EDIT</Link>
-                    <button>DELETE</button>
+                    <button onClick={(e) => handleDelete(d.id)}>DELETE</button>
                     <button>READ</button>
                   </td>
                 </tr>
