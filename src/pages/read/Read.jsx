@@ -17,12 +17,12 @@ const Read = () => {
   return (
     <>
       <div className="container">
-          <div>
-            <p>{data.id}</p>
-            <p>{data.name}</p>
-            <p>{data.email}</p>
-            <Link to="/">HOME</Link>
-          </div>
+        <div>
+          <p>{data.id}</p>
+          <p>{data.name}</p>
+          <p>{data.email}</p>
+          <Link to="/">HOME</Link>
+        </div>
       </div>
     </>
   );

@@ -1,41 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "user 1",
-      "email": "user@gmail.com1"
-    },
-    {
-      "id": 2,
-      "name": "user 2",
-      "email": "user@gmail.com2"
-    },
-    {
-      "id": 3,
-      "name": "user 3",
-      "email": "user@gmail.com3"
-    },
-    {
-      "id": 4,
-      "name": "user 4",
-      "email": "user@gmail.com4"
-    },
-    {
-      "id": 5,
-      "name": "user 5",
-      "email": "user@gmail.com5"
-    },
-    {
-      "id": "5880",
-      "name": "",
-      "email": ""
-    },
-    {
-      "id": "bd09",
-      "name": "jkl",
-      "email": "jklkjl@tmail.com"
-    },
-    {
       "id": "e23e",
       "name": "first task",
       "email": "alo@gmail.com"
@@ -44,6 +9,23 @@
       "id": "4ab5",
       "name": "first task",
       "email": "new@gmail.com"
+    },
+    {
+      "id": "c551",
+      "name": "first task",
+      "email": "alo@gmail.com",
+      "image": {}
+    },
+    {
+      "id": "8e21",
+      "name": "test",
+      "email": "alo@gmail.com",
+      "color": "#59ff00"
+    },
+    {
+      "id": "eee0",
+      "name": "first task",
+      "email": "yujhkjk@gmail.com"
     }
   ]
 }

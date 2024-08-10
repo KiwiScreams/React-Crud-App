@@ -23,7 +23,7 @@ const Home = () => {
   }
   return (
     <>
-      <section className="container">
+      <section className="home-container">
         <Link to="/create">Create</Link>
         <table>
           <thead>
