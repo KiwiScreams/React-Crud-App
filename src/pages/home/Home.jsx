@@ -42,9 +42,15 @@ const Home = () => {
                   <td>{d.name}</td>
                   <td>{d.email}</td>
                   <td>
-                    <Link to={`/update/${d.id}`}>EDIT</Link>
-                    <button onClick={(e) => handleDelete(d.id)}>DELETE</button>
-                    <Link to={`/read/${d.id}`}>READ</Link>
+                    <Link to={`/update/${d.id}`}>
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </Link>
+                    <button onClick={(e) => handleDelete(d.id)}>
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                    <Link to={`/read/${d.id}`}>
+                      <i class="fa-solid fa-book-open-reader"></i>
+                    </Link>
                   </td>
                 </tr>
               );
