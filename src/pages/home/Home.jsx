@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Home.css";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -12,7 +13,7 @@ const Home = () => {
   return (
     <>
       <section className="container">
-        <button>Create</button>
+        <Link to="/create">Create</Link>
         <table>
           <thead>
             <tr>
@@ -29,8 +30,10 @@ const Home = () => {
                   <td>{d.id}</td>
                   <td>{d.name}</td>
                   <td>{d.email}</td>
-                  <button>EDIT</button>
-                  <button>DELETE</button>
+                  <td>
+                    <button>EDIT</button>
+                    <button>DELETE</button>
+                  </td>
                 </tr>
               );
             })}
