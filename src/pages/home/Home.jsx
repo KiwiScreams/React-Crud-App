@@ -44,7 +44,7 @@ const Home = () => {
                   <td>
                     <Link to={`/update/${d.id}`}>EDIT</Link>
                     <button onClick={(e) => handleDelete(d.id)}>DELETE</button>
-                    <button>READ</button>
+                    <Link to={`/read/${d.id}`}>READ</Link>
                   </td>
                 </tr>
               );
