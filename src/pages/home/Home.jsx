@@ -15,12 +15,12 @@ const Home = () => {
       .catch((err) => console.log(err));
   }, []);
   function handleDelete(id) {
-      axios.delete("http://localhost:3030/users/" + id).then((res) => {
-        setIsSuccess(true);
-        setTimeout(() => {
-          setIsSuccess(false);
-        }, 2000);
-      });
+    axios.delete("http://localhost:3030/users/" + id).then((res) => {
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 2000);
+    });
   }
   return (
     <>
@@ -41,29 +41,37 @@ const Home = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((d, i) => {
-                return (
-                  <tr key={i}>
-                    <td>{d.id}</td>
-                    <td>{d.name}</td>
-                    <td>{d.email}</td>
-                    <td className="flex">
-                      <Link to={`/update/${d.id}`} className="btn">
-                        <i className="fa-solid fa-pen-to-square"></i>
-                      </Link>
-                      <button
-                        onClick={(e) => handleDelete(d.id)}
-                        className="btn"
-                      >
-                        <i className="fa-solid fa-trash"></i>
-                      </button>
-                      <Link to={`/read/${d.id}`} className="btn">
-                        <i className="fa-solid fa-book-open-reader"></i>
-                      </Link>
-                    </td>
-                  </tr>
-                );
-              })}
+              {data.length > 0 ? (
+                data.map((d, i) => {
+                  return (
+                    <tr key={i}>
+                      <td>{d.id}</td>
+                      <td>{d.name}</td>
+                      <td>{d.email}</td>
+                      <td className="flex">
+                        <Link to={`/update/${d.id}`} className="btn">
+                          <i className="fa-solid fa-pen-to-square"></i>
+                        </Link>
+                        <button
+                          onClick={(e) => handleDelete(d.id)}
+                          className="btn"
+                        >
+                          <i className="fa-solid fa-trash"></i>
+                        </button>
+                        <Link to={`/read/${d.id}`} className="btn">
+                          <i className="fa-solid fa-book-open-reader"></i>
+                        </Link>
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr>
+                  <td colSpan="4" className="text-center">
+                    List is empty
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
