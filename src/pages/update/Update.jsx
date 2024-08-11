@@ -3,6 +3,7 @@ import "./Update.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const Update = () => {
   const { id } = useParams();
@@ -31,38 +32,44 @@ const Update = () => {
 
   return (
     <>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="id">ID:</label>
-            <input type="number" disabled name="id" value={inputData.id} />
+      <Link to="/home" className="arrow">
+        <i class="fa-solid fa-arrow-left"></i>
+      </Link>
+      <section className="update-section">
+        <div className="update-container">
+          <div className="header">
+            <div className="line"></div>
+            <h1>Update</h1>
+            <div className="line"></div>
           </div>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={inputData.name}
-              onChange={(e) =>
-                setInputData({ ...inputData, name: e.target.value })
-              }
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={inputData.email}
-              onChange={(e) =>
-                setInputData({ ...inputData, email: e.target.value })
-              }
-            />
-          </div>
-          <br />
-          <button>Update</button>
-        </form>
-      </div>
+          <form onSubmit={handleSubmit}>
+            <div className="input-container">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={inputData.name}
+                onChange={(e) =>
+                  setInputData({ ...inputData, name: e.target.value })
+                }
+              />
+            </div>
+            <div className="input-container">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                value={inputData.email}
+                onChange={(e) =>
+                  setInputData({ ...inputData, email: e.target.value })
+                }
+              />
+            </div>
+            <br />
+            <button>Update</button>
+          </form>
+        </div>
+      </section>
     </>
   );
 };
