@@ -4,7 +4,11 @@ const SuccesPanel = () => {
     <>
       <div className="success-panel">
         <div className="success-container">
-          <h1>success</h1>
+          <i className="fa-regular fa-circle-check"></i>
+          <p>
+            Thank you for using our app. <br />
+            Have a great day!
+          </p>
         </div>
       </div>
     </>
