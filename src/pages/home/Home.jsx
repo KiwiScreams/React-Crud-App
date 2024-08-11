@@ -23,8 +23,9 @@ const Home = () => {
   }
   return (
     <>
-      <section className="home-container">
-        <Link to="/create">Create</Link>
+    <section className="home-section">
+      <div className="home-container">
+        <div className="create"><Link to="/create"><i class="fa-solid fa-plus"></i></Link></div>
         <table>
           <thead>
             <tr>
@@ -41,14 +42,14 @@ const Home = () => {
                   <td>{d.id}</td>
                   <td>{d.name}</td>
                   <td>{d.email}</td>
-                  <td>
-                    <Link to={`/update/${d.id}`}>
+                  <td className="flex">
+                    <Link to={`/update/${d.id}`} className="btn">
                       <i class="fa-solid fa-pen-to-square"></i>
                     </Link>
-                    <button onClick={(e) => handleDelete(d.id)}>
+                    <button onClick={(e) => handleDelete(d.id)} className="btn">
                       <i class="fa-solid fa-trash"></i>
                     </button>
-                    <Link to={`/read/${d.id}`}>
+                    <Link to={`/read/${d.id}`} className="btn">
                       <i class="fa-solid fa-book-open-reader"></i>
                     </Link>
                   </td>
@@ -57,6 +58,7 @@ const Home = () => {
             })}
           </tbody>
         </table>
+      </div>
       </section>
     </>
   );
