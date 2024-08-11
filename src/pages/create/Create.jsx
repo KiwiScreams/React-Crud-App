@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Create.css";
 import { Link } from "react-router-dom";
+import SuccesPanel from "../panel/succes panel/Success";
 const Create = () => {
   const [inputData, setInputData] = useState({
     name: "",
@@ -12,10 +13,14 @@ const Create = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post("http://localhost:3030/users", inputData).then((res) => {
-      alert("success");
-      navigate("/");
+      setIsSuccess(true);
+      setTimeout(() => {
+        navigate("/");
+        setIsSuccess(false);
+      }, 2000);
     });
   };
+  const [isSuccess, setIsSuccess] = useState(false);
   const isFormValid = () => {
     const { name, email } = inputData;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -60,6 +65,7 @@ const Create = () => {
           </form>
         </div>
       </section>
+      {isSuccess && <SuccesPanel />}
     </>
   );
 };
