@@ -5,9 +5,10 @@ import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import SuccesPanel from "../panel/succes panel/Success";
 const Update = () => {
   const { id } = useParams();
-
+  const [isSuccess, setIsSuccess] = useState(false);
   const [inputData, setInputData] = useState({
     id: id,
     name: "",
@@ -24,8 +25,11 @@ const Update = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.put("http://localhost:3030/users/" + id, inputData).then((res) => {
-      alert("Data Updated");
-      navigate("/");
+      setIsSuccess(true);
+      setTimeout(() => {
+        navigate("/");
+        setIsSuccess(false);
+      }, 2000);
     });
   };
   const isFormValid = () => {
@@ -73,6 +77,7 @@ const Update = () => {
           </form>
         </div>
       </section>
+      {isSuccess && <SuccesPanel />}
     </>
   );
 };
