@@ -10,7 +10,7 @@
 .create-container
 {
     width: 40%;
-    padding: 20px 40px;
+    padding: 20px 40px 30px 40px;
     border-radius: 20px;
     box-shadow: 0 0 10px gray;
     background-color: #fff;
@@ -48,6 +48,8 @@
     font-size: 22px;
     border-radius: 10px;
     height: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 .create-container button:hover
 {
@@ -68,4 +70,15 @@
     width: 30%;
     background-color: blueviolet;
     height: 1px;
+}
+a.arrow i
+{
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
 }

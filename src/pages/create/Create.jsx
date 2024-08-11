@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Create.css";
+import { Link } from "react-router-dom";
 const Create = () => {
   const [inputData, setInputData] = useState({
     name: "",
@@ -23,6 +24,9 @@ const Create = () => {
   };
   return (
     <>
+      <Link to="/home" className="arrow">
+        <i class="fa-solid fa-arrow-left"></i>
+      </Link>
       <section className="create-section">
         <div className="create-container">
           <div className="header">
