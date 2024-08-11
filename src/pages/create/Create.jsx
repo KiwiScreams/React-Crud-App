@@ -19,7 +19,6 @@ const Create = () => {
   const isFormValid = () => {
     const { name, email } = inputData;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
     return name.trim() !== "" && email.trim() !== "" && emailRegex.test(email);
   };
   return (
