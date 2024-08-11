@@ -17,7 +17,7 @@ const Home = () => {
     if (confirm) {
       axios.delete("http://localhost:3030/users/" + id).then((res) => {
         alert("Record Deleted");
-        navigate("/home");
+        navigate("/");
       });
     }
   }

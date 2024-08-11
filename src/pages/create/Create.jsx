@@ -13,7 +13,7 @@ const Create = () => {
     event.preventDefault();
     axios.post("http://localhost:3030/users", inputData).then((res) => {
       alert("success");
-      navigate("/home");
+      navigate("/");
     });
   };
   const isFormValid = () => {
@@ -23,7 +23,7 @@ const Create = () => {
   };
   return (
     <>
-      <Link to="/home" className="arrow">
+      <Link to="/" className="arrow">
         <i class="fa-solid fa-arrow-left"></i>
       </Link>
       <section className="create-section">
