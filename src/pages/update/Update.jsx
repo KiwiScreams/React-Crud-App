@@ -25,7 +25,7 @@ const Update = () => {
     event.preventDefault();
     axios.put("http://localhost:3030/users/" + id, inputData).then((res) => {
       alert("Data Updated");
-      navigate("/home");
+      navigate("/");
     });
   };
   const isFormValid = () => {
@@ -35,7 +35,7 @@ const Update = () => {
   };
   return (
     <>
-      <Link to="/home" className="arrow">
+      <Link to="/" className="arrow">
         <i class="fa-solid fa-arrow-left"></i>
       </Link>
       <section className="update-section">

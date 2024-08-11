@@ -16,7 +16,7 @@ const Read = () => {
   }, []);
   return (
     <>
-      <Link to="/home" className="arrow">
+      <Link to="/" className="arrow">
         <i class="fa-solid fa-arrow-left"></i>
       </Link>
       <section className="read-section">
