@@ -53,3 +53,19 @@
 {
     opacity: 0.8;
 }
+.create-container button:disabled
+{
+    opacity: 0.3;
+}
+.create-container .header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create-container .header .line
+{
+    width: 30%;
+    background-color: blueviolet;
+    height: 1px;
+}

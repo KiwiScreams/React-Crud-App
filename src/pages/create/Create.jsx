@@ -15,11 +15,21 @@ const Create = () => {
       navigate("/home");
     });
   };
+  const isFormValid = () => {
+    const { name, email } = inputData;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    return name.trim() !== "" && email.trim() !== "" && emailRegex.test(email);
+  };
   return (
     <>
       <section className="create-section">
         <div className="create-container">
-          <h1>Create</h1>
+          <div className="header">
+            <div className="line"></div>
+            <h1>Create</h1>
+            <div className="line"></div>
+          </div>
           <form onSubmit={handleSubmit}>
             <div className="input-container">
               <label htmlFor="name">Name:</label>
@@ -43,7 +53,7 @@ const Create = () => {
                 }
               />
             </div>
-            <button>Create</button>
+            <button disabled={!isFormValid()}>Create</button>
           </form>
         </div>
       </section>
