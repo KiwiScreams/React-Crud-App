@@ -1,0 +1,30 @@
+.read-container
+{
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px 40px 30px 40px;
+}
+.read-section
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.read-container .header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.read-container .header .line
+{
+    width: 30%;
+    background-color: blueviolet;
+    height: 1px;
+}

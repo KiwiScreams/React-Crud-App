@@ -1,43 +1,6 @@
 {
   "users": [
     {
-      "id": "e23e",
-      "name": "first task",
-      "email": "alo@gmail.com"
-    },
-    {
-      "id": "4ab5",
-      "name": "first task",
-      "email": "new@gmail.com"
-    },
-    {
-      "id": "c551",
-      "name": "first task",
-      "email": "alo@gmail.com",
-      "image": {}
-    },
-    {
-      "id": "8e21",
-      "name": "test",
-      "email": "alo@gmail.com",
-      "color": "#59ff00"
-    },
-    {
-      "id": "eee0",
-      "name": "first task",
-      "email": "yujhkjk@gmail.com"
-    },
-    {
-      "id": "3b0f",
-      "name": "",
-      "email": ""
-    },
-    {
-      "id": "0532",
-      "name": "",
-      "email": ""
-    },
-    {
       "id": "a014",
       "name": "ghj",
       "email": "ghj@gmail.com"
@@ -56,11 +19,6 @@
       "id": "9599",
       "name": "b",
       "email": "pavle@gmail.com"
-    },
-    {
-      "id": "4380",
-      "name": "b",
-      "email": "alo@gmail.co"
     }
   ]
 }

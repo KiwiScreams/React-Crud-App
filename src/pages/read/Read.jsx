@@ -16,14 +16,30 @@ const Read = () => {
   }, []);
   return (
     <>
-      <div className="container">
-        <div>
-          <p>{data.id}</p>
-          <p>{data.name}</p>
-          <p>{data.email}</p>
-          <Link to="/home">HOME</Link>
+      <Link to="/home" className="arrow">
+        <i class="fa-solid fa-arrow-left"></i>
+      </Link>
+      <section className="read-section">
+        <div className="read-container">
+        <div className="header">
+            <div className="line"></div>
+            <h1>Detail</h1>
+            <div className="line"></div>
+          </div>
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+            </tr>
+            <tr>
+              <td>{data.id}</td>
+              <td>{data.name}</td>
+              <td>{data.email}</td>
+            </tr>
+          </table>
         </div>
-      </div>
+      </section>
     </>
   );
 };
