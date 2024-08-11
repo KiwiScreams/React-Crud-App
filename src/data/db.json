@@ -1,53 +1,18 @@
 {
   "users": [
     {
-      "id": "0bc2",
-      "name": "hjk",
-      "email": "89@gmail.com"
-    },
-    {
-      "id": "a1db",
-      "name": "first task",
+      "id": "7a8c",
+      "name": "hgg",
       "email": "alo@gmail.co"
     },
     {
-      "id": "1cb1",
+      "id": "8612",
+      "name": "hgg",
+      "email": "89@gmail.com"
+    },
+    {
+      "id": "7b55",
       "name": "b",
-      "email": "89@gmail.com"
-    },
-    {
-      "id": "cc17",
-      "name": "jkl",
-      "email": "89@gmail.com"
-    },
-    {
-      "id": "a374",
-      "name": "hjk",
-      "email": "screamskiwi3@gmail.com"
-    },
-    {
-      "id": "cf82",
-      "name": "hjk",
-      "email": "89@gmail.com"
-    },
-    {
-      "id": "b527",
-      "name": "first task",
-      "email": "vano@gmail.com"
-    },
-    {
-      "id": "7f92",
-      "name": "b",
-      "email": "89@gmail.com"
-    },
-    {
-      "id": "91ef",
-      "name": "jkl",
-      "email": "pavle@gmail.com"
-    },
-    {
-      "id": "4ef0",
-      "name": "hjk",
       "email": "pavle@gmail.com"
     }
   ]
