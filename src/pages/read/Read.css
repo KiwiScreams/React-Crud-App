@@ -3,14 +3,14 @@
     width: 70%;
     margin: auto;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: var(--white-clr);
     padding: 20px 40px 30px 40px;
 }
 .read-section
 {
     width: 100vw;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: var(--blueviolet-clr);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +25,6 @@
 .read-container .header .line
 {
     width: 30%;
-    background-color: blueviolet;
+    background-color: var(--blueviolet-clr);
     height: 1px;
 }
