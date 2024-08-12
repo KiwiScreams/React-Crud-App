@@ -29,7 +29,7 @@ const Create = () => {
   return (
     <>
       <Link to="/" className="arrow">
-        <i class="fa-solid fa-arrow-left"></i>
+        <i className="fa-solid fa-arrow-left"></i>
       </Link>
       <section className="create-section">
         <div className="create-container">

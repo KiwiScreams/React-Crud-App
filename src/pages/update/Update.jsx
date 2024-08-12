@@ -40,7 +40,7 @@ const Update = () => {
   return (
     <>
       <Link to="/" className="arrow">
-        <i class="fa-solid fa-arrow-left"></i>
+        <i className="fa-solid fa-arrow-left"></i>
       </Link>
       <section className="update-section">
         <div className="update-container">

@@ -17,26 +17,28 @@ const Read = () => {
   return (
     <>
       <Link to="/" className="arrow">
-        <i class="fa-solid fa-arrow-left"></i>
+        <i className="fa-solid fa-arrow-left"></i>
       </Link>
       <section className="read-section">
         <div className="read-container">
-        <div className="header">
+          <div className="header">
             <div className="line"></div>
             <h1>Detail</h1>
             <div className="line"></div>
           </div>
           <table>
-            <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>EMAIL</th>
-            </tr>
-            <tr>
-              <td>{data.id}</td>
-              <td>{data.name}</td>
-              <td>{data.email}</td>
-            </tr>
+            <tbody>
+              <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+              </tr>
+              <tr>
+                <td>{data.id}</td>
+                <td>{data.name}</td>
+                <td>{data.email}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </section>

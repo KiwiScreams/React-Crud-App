@@ -1,73 +1,61 @@
-.update-section
-{
-    background-color: blueviolet;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.update-section {
+  background-color: var(--blueviolet-clr);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.update-container
-{
-    width: 40%;
-    padding: 20px 40px 30px 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px gray;
-    background-color: #fff;
+.update-container {
+  width: 40%;
+  padding: 20px 40px 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px var(--gray-clr);
+  background-color: var(--white-clr);
 }
-.update-container h1
-{
-    font-size: 50px;
-    text-align: center;
+.update-container h1 {
+  text-align: center;
 }
-.input-container
-{
-    margin-bottom: 20px;
+.input-container {
+  margin-bottom: 20px;
 }
-.input-container label
-{
-    display: block;
-    margin-bottom: 8px;
-    color: gray;
+.input-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gray-clr);
 }
-.input-container input
-{
-    width: 100%;
-    border: 1px solid gray;
-    border-radius: 10px;
-    height: 50px;
-    padding-left: 20px;
-    font-size: 20px;
+.input-container input {
+  width: 100%;
+  border: 1px solid var(--gray-clr);
+  border-radius: 10px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 20px;
 }
-.update-container button
-{
-    width: 100%;
-    background-color: blueviolet;
-    color: #fff;
-    font-size: 22px;
-    border-radius: 10px;
-    height: 50px;
-    margin-bottom: 10px;
-    cursor: pointer;
+.update-container button {
+  width: 100%;
+  background-color: var(--blueviolet-clr);
+  color: var(--white-clr);
+  font-size: 22px;
+  border-radius: 10px;
+  height: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
-.update-container button:hover
-{
-    opacity: 0.8;
+.update-container button:hover {
+  opacity: 0.8;
 }
-.update-container button:disabled
-{
-    opacity: 0.3;
+.update-container button:disabled {
+  opacity: 0.3;
 }
-.update-container .header
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
+.update-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
 }
-.update-container .header .line
-{
-    width: 30%;
-    background-color: blueviolet;
-    height: 1px;
+.update-container .header .line {
+  width: 30%;
+  background-color: var(--blueviolet-clr);
+  height: 1px;
 }

@@ -29,7 +29,7 @@ const Home = () => {
           <Link to="/create">
             <div className="create">
               <i className="fa-solid fa-plus"></i>
-            </div>{" "}
+            </div>
           </Link>
           <table>
             <thead>
@@ -50,7 +50,7 @@ const Home = () => {
                       <td>{d.email}</td>
                       <td className="flex">
                         <Link to={`/update/${d.id}`} className="btn">
-                        <i className="fa-solid fa-pen"></i>
+                          <i className="fa-solid fa-pen"></i>
                         </Link>
                         <button
                           onClick={(e) => handleDelete(d.id)}
@@ -59,7 +59,7 @@ const Home = () => {
                           <i className="fa-solid fa-delete-left"></i>
                         </button>
                         <Link to={`/read/${d.id}`} className="btn">
-                        <i className="fa-regular fa-folder-open"></i>
+                          <i className="fa-regular fa-folder-open"></i>
                         </Link>
                       </td>
                     </tr>
