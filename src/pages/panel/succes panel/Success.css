@@ -12,6 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 .success-container
 {
@@ -19,6 +21,14 @@
     background-color: #fff;
     border-radius: 20px;
     padding: 50px;
+}
+.success-panel.show
+{
+    opacity: 1;
+}
+.success-panel.show .success-container
+{
+    animation: fadeIn 0.5s forwards;
 }
 .success-container i
 {
@@ -33,4 +43,58 @@
     font-size: 20px;
     margin-top: 20px;
     text-align: center;
+}
+.success-panel.show .success-container i
+{
+    animation: iconFadeIn 0.5s forwards;
+}
+@keyframes iconFadeIn
+{
+    0%
+    {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100%
+    {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .success-panel.show .success-container p
+  {
+    animation: textFadeIn 0.5s forwards;
+  }
+  
+  @keyframes textFadeIn
+  {
+    0%
+    {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100%
+    {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+@keyframes fadeIn
+{
+    0%
+    {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50%
+    {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    100%
+    {
+      opacity: 1;
+      transform: scale(1);
+    }
 }

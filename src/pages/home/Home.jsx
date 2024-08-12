@@ -26,11 +26,11 @@ const Home = () => {
     <>
       <section className="home-section">
         <div className="home-container">
-          <div className="create">
-            <Link to="/create">
+          <Link to="/create">
+            <div className="create">
               <i className="fa-solid fa-plus"></i>
-            </Link>
-          </div>
+            </div>{" "}
+          </Link>
           <table>
             <thead>
               <tr>
@@ -50,16 +50,16 @@ const Home = () => {
                       <td>{d.email}</td>
                       <td className="flex">
                         <Link to={`/update/${d.id}`} className="btn">
-                          <i className="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen"></i>
                         </Link>
                         <button
                           onClick={(e) => handleDelete(d.id)}
                           className="btn"
                         >
-                          <i className="fa-solid fa-trash"></i>
+                          <i className="fa-solid fa-delete-left"></i>
                         </button>
                         <Link to={`/read/${d.id}`} className="btn">
-                          <i className="fa-solid fa-book-open-reader"></i>
+                        <i className="fa-regular fa-folder-open"></i>
                         </Link>
                       </td>
                     </tr>
