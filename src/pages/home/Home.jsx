@@ -17,9 +17,19 @@ const Home = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+
   useEffect(() => {
-    setFilteredData(data); // Update filteredData when data changes
-  }, [data]);
+    if (searchQuery === "") {
+      setFilteredData(data);
+    } else {
+      const filtered = data.filter((d) =>
+        d.email.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredData(filtered);
+    }
+  }, [data, searchQuery]);
 
   function handleDelete(id) {
     axios.delete("http://localhost:3030/users/" + id).then((res) => {
@@ -30,15 +40,8 @@ const Home = () => {
     });
   }
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredData, setFilteredData] = useState([]);
-
   const handleSearch = (query) => {
     setSearchQuery(query);
-    const filtered = data.filter((d) =>
-      d.email.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredData(filtered);
   };
 
   return (
@@ -67,7 +70,16 @@ const Home = () => {
                     <tr key={i}>
                       <td>{d.id}</td>
                       <td>{d.name}</td>
-                      <td>{d.email}</td>
+                      <td
+                        style={{
+                          visibility:
+                            d.email.toLowerCase() === searchQuery.toLowerCase()
+                              ? "visible"
+                              : "hidden",
+                        }}
+                      >
+                        {d.email}
+                      </td>
                       <td className="flex">
                         <Link to={`/update/${d.id}`} className="btn">
                           <i className="fa-solid fa-pen"></i>
@@ -88,7 +100,7 @@ const Home = () => {
               ) : (
                 <tr>
                   <td colSpan="4" className="text-center">
-                    List is empty
+                    No results found
                   </td>
                 </tr>
               )}
