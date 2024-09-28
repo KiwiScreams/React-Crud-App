@@ -59,3 +59,17 @@
   background-color: var(--blueviolet-clr);
   height: 1px;
 }
+@media screen and (max-width: 1450px) {
+  .update-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .update-container {
+    width: 98%;
+    box-shadow: none;
+  }
+  .update-section {
+    background-color: var(--white-clr);
+  }
+}

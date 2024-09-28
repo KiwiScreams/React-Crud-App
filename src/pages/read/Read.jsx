@@ -26,20 +26,15 @@ const Read = () => {
             <h1>Detail</h1>
             <div className="line"></div>
           </div>
-          <table>
-            <tbody>
-              <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>EMAIL</th>
-              </tr>
-              <tr>
-                <td>{data.id}</td>
-                <td>{data.name}</td>
-                <td>{data.email}</td>
-              </tr>
-            </tbody>
-          </table>
+          {/* <th>ID</th> */}
+          {/* <th>NAME</th> */}
+          {/* <th>EMAIL</th> */}
+          {/* <td>{data.id}</td> */}
+          {/* <td>{data.name}</td> */}
+          {/* <td>{data.email}</td> */}
+          <h3>ID: <span>{data.id}</span></h3>
+          <h3>Name: <span>{data.name}</span></h3>
+          <h3>Email: <span>{data.email}</span></h3>
         </div>
       </section>
     </>
