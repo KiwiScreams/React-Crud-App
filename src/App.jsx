@@ -8,21 +8,16 @@ import { useLocation } from "react-router-dom";
 function App() {
   const location = useLocation();
   useEffect(() => {
-    switch (location.pathname) {
-      case "/":
-        document.title = "Crud App | Home";
-        break;
-      case "/create":
-        document.title = "Crud App | Create";
-        break;
-      case "/update/":
-        document.title = "Crud App | Update";
-        break;
-      case "/read":
-        document.title = "Crud App | Detail";
-        break;
-      default:
-        document.title = "Crud App";
+    if (location.pathname === "/") {
+      document.title = "Crud App | Home";
+    } else if (location.pathname === "/create") {
+      document.title = "Crud App | Create";
+    } else if (location.pathname.includes("/update")) {
+      document.title = "Crud App | Update";
+    } else if (location.pathname.includes("/read")) {
+      document.title = "Crud App | Detail";
+    } else {
+      document.title = "Crud App";
     }
   }, [location]);
   return (
