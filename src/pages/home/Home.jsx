@@ -20,6 +20,8 @@ const Home = () => {
       setTimeout(() => {
         setIsSuccess(false);
       }, 2000);
+      const updatedData = data.filter((d) => d.id !== id);
+      setData(updatedData);
     });
   }
   return (
