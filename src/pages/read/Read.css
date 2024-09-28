@@ -24,6 +24,19 @@
   background-color: var(--blueviolet-clr);
   height: 1px;
 }
+.read-container h3
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid var(--blueviolet-clr);
+    margin-bottom: 10px;
+}
+.read-container h3 span
+{
+    font-weight: lighter;
+    color: var(--blueviolet-clr);
+}
 @media screen and (max-width: 1450px) {
   .read-container {
     width: 80%;
