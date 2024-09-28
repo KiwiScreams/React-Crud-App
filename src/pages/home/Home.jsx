@@ -4,6 +4,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import SuccesPanel from "../panel/succes panel/Success";
+import SearchBar from "../search/SearchBar";
 const Home = () => {
   const [data, setData] = useState([]);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -24,6 +25,7 @@ const Home = () => {
   }
   return (
     <>
+      <SearchBar />
       <section className="home-section">
         <div className="home-container">
           <Link to="/create">

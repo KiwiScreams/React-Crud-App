@@ -1,7 +1,9 @@
 import "./SearchBar.css";
 const SearchBar = () => {
     return ( 
-        <>search me</>
+        <>
+        <input type="text" />
+        </>
      );
 }
  
