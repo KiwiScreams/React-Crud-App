@@ -64,7 +64,7 @@
     width: 80%;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .update-container {
     width: 98%;
     box-shadow: none;
