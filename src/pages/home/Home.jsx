@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import SuccesPanel from "../panel/succes panel/Success";
 const Home = () => {
   const [data, setData] = useState([]);
   const [isSuccess, setIsSuccess] = useState(false);
-  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("http://localhost:3030/users")

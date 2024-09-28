@@ -3,7 +3,7 @@ import Home from "./pages/home/Home";
 import Create from "./pages/create/Create";
 import Update from "./pages/update/Update";
 import Read from "./pages/read/Read";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NotFound from "./pages/not found/NotFound";
 function App() {

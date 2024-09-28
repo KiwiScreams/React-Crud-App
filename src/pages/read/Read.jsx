@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./Read.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const Read = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
@@ -32,9 +31,15 @@ const Read = () => {
           {/* <td>{data.id}</td> */}
           {/* <td>{data.name}</td> */}
           {/* <td>{data.email}</td> */}
-          <h3>ID: <span>{data.id}</span></h3>
-          <h3>Name: <span>{data.name}</span></h3>
-          <h3>Email: <span>{data.email}</span></h3>
+          <h3>
+            ID: <span>{data.id}</span>
+          </h3>
+          <h3>
+            Name: <span>{data.name}</span>
+          </h3>
+          <h3>
+            Email: <span>{data.email}</span>
+          </h3>
         </div>
       </section>
     </>
