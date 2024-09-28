@@ -1,0 +1,54 @@
+.notfound-section {
+  width: 60%;
+  background-color: var(--white-clr);
+  padding: 20px 40px 30px 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.notfound-section img {
+  margin: auto;
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+.notfound-section h2 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  color: var(--blueviolet-clr);
+}
+.notfound-section p {
+  width: 50%;
+  margin: auto;
+}
+@media screen and (max-width: 1230px) {
+  .notfound-section {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .notfound-section {
+    width: 90%;
+  }
+  .notfound-section p {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 680px) {
+  .notfound-section {
+    width: 100%;
+  }
+  .notfound-section p {
+    width: 100%;
+  }
+  .notfound-section img {
+    margin: auto;
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+}

@@ -3,8 +3,9 @@ import Home from "./pages/home/Home";
 import Create from "./pages/create/Create";
 import Update from "./pages/update/Update";
 import Read from "./pages/read/Read";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import NotFound from "./pages/not found/NotFound";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/create" element={<Create />}></Route>
         <Route path="/update/:id" element={<Update />}></Route>
         <Route path="/read/:id" element={<Read />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
   );
