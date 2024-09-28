@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import SuccesPanel from "../panel/succes panel/Success";
 import SearchBar from "../search/SearchBar";
+
 const Home = () => {
   const [data, setData] = useState([]);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -15,6 +16,11 @@ const Home = () => {
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
+
+  useEffect(() => {
+    setFilteredData(data); // Update filteredData when data changes
+  }, [data]);
+
   function handleDelete(id) {
     axios.delete("http://localhost:3030/users/" + id).then((res) => {
       setIsSuccess(true);
@@ -23,9 +29,21 @@ const Home = () => {
       }, 2000);
     });
   }
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    const filtered = data.filter((d) =>
+      d.email.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredData(filtered);
+  };
+
   return (
     <>
-      <SearchBar />
+      <SearchBar onChange={(e) => handleSearch(e.target.value)} />
       <section className="home-section">
         <div className="home-container">
           <Link to="/create">
@@ -43,8 +61,8 @@ const Home = () => {
               </tr>
             </thead>
             <tbody>
-              {data.length > 0 ? (
-                data.map((d, i) => {
+              {filteredData.length > 0 ? (
+                filteredData.map((d, i) => {
                   return (
                     <tr key={i}>
                       <td>{d.id}</td>
